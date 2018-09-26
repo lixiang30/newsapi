@@ -88,4 +88,17 @@ class CategoryStringitemsViewset(viewsets.ReadOnlyModelViewSet):
     serializer_class = CategoryStringSerializer
     lookup_field = "id"
 
+class CategoryPrimaryKeyitemsViewset(viewsets.ReadOnlyModelViewSet):
+    """
+    list:
+        分类列表数据
+    retrieve:
+        获取分类详情
+    """
+    # 查询对象集
+    queryset = Category.objects.all()
+    # 序列化的类名
+    serializer_class = CategoryPrimaryKeySerializer
+    lookup_field = "id"
+
 
