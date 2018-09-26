@@ -75,3 +75,17 @@ class ItemViewset(viewsets.ModelViewSet):
     # 应用于执行单个模型实例的对象查找的模型字段。默认为’pk’。
     lookup_field = "id"
 
+class CategoryStringitemsViewset(viewsets.ReadOnlyModelViewSet):
+    """
+    list:
+        分类列表数据
+    retrieve:
+        获取分类详情
+    """
+    # 查询对象集
+    queryset = Category.objects.all()
+    # 序列化的类名
+    serializer_class = CategoryStringSerializer
+    lookup_field = "id"
+
+
