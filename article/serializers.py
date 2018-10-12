@@ -88,6 +88,7 @@ class ItemnocateSerializer(serializers.ModelSerializer):
         model = Item
         fields = "__all__"
 
+
 #按serializers来序列化
 class TagSerializer(serializers.ModelSerializer):
     #id = serializers.Field()
@@ -101,6 +102,8 @@ class AdSerializer(serializers.ModelSerializer):
     class Meta:
         model = Ad
         fields = "__all__"
+
+
 
 class ArticleSerializer(serializers.ModelSerializer):
     #外键相关对象
@@ -245,3 +248,4 @@ class UserFavSerializer(serializers.ModelSerializer):
         ]
 
         fields = ('user', 'articles','id')
+
